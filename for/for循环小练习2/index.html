@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.弹出输入框 要求输入班级总人数   D
+        //2.根据输入的总人数 决定 要输入几个人的成绩 D
+        //3.对输入的成绩 求和 D
+        //4.计算平均值 
+
+        var numSum = prompt('请输入班级的总人数：');
+        var total = 0;
+        var aver = null;
+        for(let i = 1;i<=numSum;i++){
+            total = total+parseInt(prompt(`请输入第${i}个人的成绩：`));
+        }
+        aver = total/numSum;
+        alert(`班级同学的总成绩是：${total}！`);
+        alert(`班级同学的成绩平均值是:${aver}！`);
+
+        //练习2 打印五角星
+        //追加字符串的方式 
+        //1. 设置一个空的字符串 每次循环以后进行一个字符串拼接 最终获得同一行显示多个五角星的效果
+        var str = '';
+        var number = prompt('请输入你想要几个星星：');
+        for (let i = 1;i<=number;i++){
+            str = str + '★';
+        }
+        console.log(str);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*  1. for (外层的初始化变量；外层的条件表达式；外层的操作表达式) {
+                for (里层的初始化变量；里层的条件表达式；里层的操作表达式) {
+                            执行语句；
+                  }
+                }
+         */              
+
+            //2. 可以将里面的循环看作是外层循环的语句
+
+            //3.外层循环执行一次，里面的循环执行全部
+
+            //4.代码验证
+
+            // for (let i =1;i<=3;i++){
+            //     console.log(`这是外层的第${i}次循环`)
+            //     for(let j = 1; j<=3;j++){
+            //         console.log(`这是里层的第${j}次循环`)
+            //     }
+            // };
+
+            //打印五行五列五角星的作业
+            // var str = '';
+            // for (let i = 1;i<=5;i++){
+            
+            //     for(let j = 1 ;j<=5;j++){
+            //         str=str+'★';
+            //     }
+            //     str = str+'\n';
+            // }
+            // console.log(str);
+
+            //打印用户输入几行几列的星星 作业
+
+            // var str='';
+            // var num1 = prompt('你想要打印几行：');
+            // var num2 = prompt('你想要打印几列：');
+            // for (let i =1 ; i<=num1;i++){
+            //     for (let j = 1;j<=num2;j++){
+            //         str = str +'★';
+            //     }
+            //     str = str+'\n'
+            // }
+            // console.log(str);
+
+            //按照行数决定列数的星星 作业
+            //正向排列的
+            // var str = '';
+            // for (let i = 0;i<=5;i++){
+            //     for (let j = 0;j<=i;j++){
+            //         str = str +'★';
+            //     }
+            //     str=str+'\n';
+            // }
+            // console.log(str);
+
+            //反向排列 倒三角
+            // var str = '';
+            // for (let i = 1;i<=5;i++){
+            //     for (let j = 5;j>=i;j--){
+            //         str = str +'★';
+            //     }
+            //     str=str+'\n';
+            // }
+            // console.log(str);
+            
+
+            //99乘法表
+            var str = '';
+            for (let i = 1;i<=9;i++){
+                for (let j=1;j<=i;j++){
+                    var jnum=j.toString();
+                    var inum=i.toString();
+                    var sumNum=(j*i).toString();
+                    str =str +' '+ jnum+'x'+inum+'='+sumNum;
+                }
+                str = str+'\n';
+            }
+            console.log(str);
+    </script>
+</body>
+
+</html>
