@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //continur 关键字用于立即跳出本次循环， 继续下一次循环（本次循环体中continue 之后的代码就会少执行一次）
+        //例如 早上吃包子 总共要吃五个包子 但是第三个有虫子 就把第三个扔掉了 继续吃第四个和第五个包子 
+        // 代码实现如下： 
+
+       /*  for (i=1;i<=5;i++){
+            if (i==3){
+                continue; //只要遇见 continue 就退出当前次的循环体 进入i++;并且执行剩余次数的循环
+            }
+            console.log(`我正在吃第${i}个包子`)
+        } */
+
+
+        //作业 1  求  1~100 之间， 除了能被7整除以外的 所有整数的和
+
+        // var sum = 0;
+        // for (i=1;i<=100;i++){
+        //     if(i%7==0){
+        //         continue;
+        //     }
+        //     sum = sum+i;
+        // }
+        // console.log(sum);
+
+        //作业2 求整数1-100的累加值 但要求跳过所有个位数字为3 的数。
+        var sum = 0;
+        for (let i = 1;i<=100; i++){
+            if(i%10==3){
+                continue;
+            }
+            sum = sum + i;
+        }
+        console.log(sum);
+    </script>
+</body>
+</html>

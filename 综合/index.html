@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 简易ATM 
+        // 1.里面存有 100块钱 
+        // 2.如果存钱 就用输入钱数加上先存的钱数  之后弹出显示余额提示框
+        // 3.如果取钱 就减去取出的钱数 之后弹出显示余额提示框
+        // 4.如果显示余额 就输出余额
+        // 5.如果退出 弹出退出信息提示框
+        //    var userOp=null;
+        //     var save = 100;
+        var save = 100;
+        while (1) {
+            let userOp = null;
+            
+            userOp = prompt('请输入您要进行的操作：\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+
+            if (userOp == 1) {
+                var newSave = prompt('请输入您要存入的数额：');
+                save = parseInt(save) + parseInt(newSave);
+                alert(`您当前的余额是${save}元`);
+            }
+            else if (userOp == 2) {
+                var putOut = prompt('请输入您要取出的数额：');
+                if (save >= putOut) {
+                    save = parseInt(save) - parseInt(putOut);
+                    alert(`您当前的余额是${save}元`);
+                }
+                else {
+                    alert('您的余额不足');
+                }
+            }
+            else if (userOp == 3) {
+                alert(`您当前的余额是${save}元`);
+            }
+            else  {
+                break;
+            };
+        }
+        alert('感谢您的使用，再见');
+    </script>
+</body>
+
+</html>
